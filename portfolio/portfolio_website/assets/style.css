@@ -1,0 +1,266 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("C:\Users\kalm1\portfolio\portfolio_website\assets\image\wave-haikei.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #333;
+  transition: opacity 0.5s ease-in-out;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-attachment: fixed; /* Keep background fixed while scrolling */
+}
+
+/* Header */
+.header {
+  background-color: rgba(
+    85,
+    100,
+    226,
+    0.8
+  ); /* Added transparency for visibility of background */
+  color: white;
+  padding: 0px 0; /* Increased padding for a larger header */
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+
+.nav a {
+  margin: 0 15px; /* Increased margin for more spacing between links */
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem; /* Increased font size */
+}
+
+.nav a:hover {
+  color: #ff6f61;
+}
+
+/* Main Content */
+.main-content {
+  padding: 20px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Slight transparency to show background */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 60%;
+  margin: 140px auto; /* Increased margin-top for space below fixed header */
+  margin-left: 100px; /* Added margin-left to push content to the left */
+  margin-bottom: 20px;
+}
+/* Profile Section */
+.profile-section {
+  position: fixed;
+  top: 180px; /* Increased space to push the profile section further down */
+  right: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+
+.profile-image {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: visible;
+  margin-bottom: 15px;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Multi-Layered Animated Border */
+.circling-line {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #007bff, 0 0 30px #ff6f61, 0 0 45px #00c853;
+  animation: pulseAnimation 2s infinite;
+  z-index: 0;
+}
+
+/* Footer */
+.footer {
+  background-color: rgba(
+    51,
+    51,
+    51,
+    0.8
+  ); /* Added transparency for the background */
+  color: white;
+  padding: 0; /* Increased padding for a larger footer */
+  text-align: center;
+  position: relative;
+  width: 100%;
+  margin-top: 200px; /* Push footer to the bottom of the page */
+}
+
+.footer-content {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.social-icons {
+  margin-top: 10px; /* Increased margin for social icons */
+}
+
+.social-icon {
+  font-size: 2rem; /* Increased icon size */
+  margin: 0 15px; /* Increased margin for spacing between icons */
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #007bff;
+}
+
+@keyframes pulseAnimation {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 15px #007bff, 0 0 30px #ff6f61, 0 0 45px #00c853;
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #ff6f61, 0 0 40px #007bff, 0 0 55px #00c853;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 15px #007bff, 0 0 30px #ff6f61, 0 0 45px #00c853;
+  }
+}
+
+/* Download Button */
+.download-button {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px; /* Increased padding for a larger button */
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.download-button:hover {
+  background-color: #0056b3;
+}
+
+/* Skills Section */
+.skills-section {
+  padding: 50px;
+  text-align: center;
+  margin-top: 120px; /* Adjusted space for the larger header */
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+}
+
+.skills-section h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.skill {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.4);
+  border: 2px solid #007bff;
+}
+
+.skill i {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.skill h3 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Project Section */
+.project {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.project h3 {
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+.project a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+/* Project Hover Effect */
+.project:hover {
+  border: 2px solid #007bff;
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.3);
+  background-color: #f0f8ff;
+}
+
+/* Contact Section */
+.contact-section ul {
+  padding: 0;
+  list-style: none;
+}
+
+.contact-section li {
+  margin-bottom: 10px;
+}
+
+/* Ensure Scrollable Content */
+.content {
+  margin-top: 0px; /* Adjusted for larger header */
+  padding: 0px;
+  overflow-y: auto;
+  height: auto;
+}
